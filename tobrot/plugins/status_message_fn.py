@@ -81,9 +81,9 @@ async def status_message_f(
             if file.status == "active":
                 is_file = file.seeder
                 if is_file is None:
-                    msgg = f"<b>🔁Conn:</b> <code>{file.connections}</code>"
+                    msgg = f"<b>🔁𝗖𝗼𝗻𝗻:</b> <code>{file.connections}</code>"
                 else:
-                    msgg = f"<b>🍱Seeds:</b> <code>{file.num_seeders}</code> | <b>🍒Peers:</b> <code>{file.connections}</code>"
+                    msgg = f"<b>🍱𝗦𝗲𝗲𝗱𝘀:</b> <code>{file.num_seeders}</code> | <b>🍒𝗣𝗲𝗲𝗿𝘀:</b> <code>{file.connections}</code>"
 
                 percentage = int(file.progress_string(0).split('%')[0])
                 prog = "[{0}{1}]".format("".join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),"".join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]))
@@ -92,7 +92,7 @@ async def status_message_f(
                 msg += f"\n<b>📡𝗦𝘁𝗮𝘁𝘂𝘀</b>: <i>𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗶𝗻𝗴...📥<i>
                 msg += f"\n<code>{prog}</code>"
                 msg += f"\n<b>🗃𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗱</b>: <code>{file.progress_string()}</code> <b>of</b> <code>{file.total_length_string()}</code>"
-                msg += f"\n<b>📊𝗦𝗽𝗲𝗲𝗱</b>: <code>{file.download_speed_string()}</code>,"
+                msg += f"\n<b>📊𝗦𝗽𝗲𝗲𝗱</b>: <code>{file.download_speed_string()}</code>|"
                 msg += f"<b>🔍𝗘𝗧𝗔:</b> <code>{file.eta_string()}</code>"  
                 #umen = f'<a href="tg://user?id={file.message.from_user.id}">{file.message.from_user.first_name}</a>'
                 msg += f"\n<b>👤𝗨𝘀𝗲𝗿:</b> {umen} (<code>{file.message.from_user.id}</code>)"
