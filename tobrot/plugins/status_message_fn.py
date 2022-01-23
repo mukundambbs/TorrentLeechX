@@ -94,7 +94,7 @@ async def status_message_f(
                 msg += f"\n<b>🗃𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗱</b>: <code>{file.progress_string()}</code> <b>of</b> <code>{file.total_length_string()}</code>"
                 msg += f"\n<b>📊𝗦𝗽𝗲𝗲𝗱</b>: <code>{file.download_speed_string()}</code>|"
                 msg += f"<b>🔍𝗘𝗧𝗔:</b> <code>{file.eta_string()}</code>"  
-                #umen = f'<a href="tg://user?id={file.message.from_user.id}">{file.message.from_user.first_name}</a>'
+                umen = f'<a href="tg://user?id={file.message.from_user.id}">{file.message.from_user.first_name}</a>'
                 msg += f"\n<b>👤𝗨𝘀𝗲𝗿:</b> {umen} (<code>{file.message.from_user.id}</code>)"
                 msg += f"\n<b>⚠️𝗪𝗮𝗿𝗻:</b> <code>/warn {file.message.from_user.id}</code>"
                 msg += f"\n{msgg}"
