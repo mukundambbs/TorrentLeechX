@@ -94,8 +94,8 @@ async def status_message_f(
                 msg += f"\n<b>🗃𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗱</b>: <code>{file.progress_string()}</code> <b>of</b> <code>{file.total_length_string()}</code>"
                 msg += f"\n<b>📊𝗦𝗽𝗲𝗲𝗱</b>: <code>{file.download_speed_string()}</code>|"
                 msg += f"<b>🔍𝗘𝗧𝗔:</b> <code>{file.eta_string()}</code>"  
-                umen = f'<a href="tg://user?id={file.message.from_user.id}">{file.message.from_user.first_name}</a>'
-                msg += f"\n<b>👤𝗨𝘀𝗲𝗿:</b> {umen} (<code>{file.message.from_user.id}</code>)"
+                #umen = f'<a href="tg://user?id={file.message.from_user.id}">{file.message.from_user.first_name}</a>'
+                #msg += f"\n<b>👤𝗨𝘀𝗲𝗿:</b> {umen} (<code>{file.message.from_user.id}</code>)"
                 msg += f"\n<b>⚠️𝗪𝗮𝗿𝗻:</b> <code>/warn {file.message.from_user.id}</code>"
                 msg += f"\n{msgg}"
                 msg += f"\n<b>🚫𝗧𝗼 𝗖𝗮𝗻𝗰𝗲𝗹:</b> <code>/cancel {file.gid}</code>"
@@ -111,16 +111,16 @@ async def status_message_f(
 
         ms_g = (
             f"<b>━━━━━━━━━━━━━━━━━━━━</b>\n\n"
-            f"<b>CPU:</b> <code>{cpu}%</code> | <b>RAM:</b> <code>{ram}%</code>\n"
-            f"<b>FREE:</b> <code>{free}</code> | <b>UPTIME</b>: <code>{hr}h{mi}m{se}s</code>\n"
-            f"<b>TOTAL:</b> <code>{total}</code> | <b>USED:</b> <code>{used}</code>\n"
+            f"<b>𝗖𝗣𝗨:</b> <code>{cpu}%</code> | <b>𝗥𝗔𝗠:</b> <code>{ram}%</code>\n"
+            f"<b>𝗙𝗥𝗘𝗘:</b> <code>{free}</code> | <b>𝗨𝗣𝗧𝗜𝗠𝗘</b>: <code>{hr}h{mi}m{se}s</code>\n"
+            f"<b>𝗧𝗢𝗧𝗔𝗟:</b> <code>{total}</code> | <b>𝗨𝗦𝗘𝗗:</b> <code>{used}</code>\n"
         )
         if msg == "":
-            msg = "<b>▬▬▬ @LinkZz_MBBS ▬▬▬\n\n⚠️ No Active, Queued or Paused TORRENTs/Direct Links ⚠️</b>\n"
+            msg = "<b>▬▬▬ @LinkZz_MBBS ▬▬▬\n\n ɴᴏ ᴀᴄᴛɪᴠᴇ, ǫᴜᴇᴜᴇᴅ ᴏʀ ᴘᴀᴜsᴇᴅ ᴛᴏʀʀᴇɴᴛs/ᴅɪʀᴇᴄᴛ ʟɪɴᴋs ⚠</b>\n"
             msg = msg + "\n" + ms_g
             await to_edit.edit(msg)
             #await asyncio.sleep(5)
-            #await msg.delete() #Delete Bot Message after 5 sec 
+            #await msg.delete() #Delete Bot Message after 10 sec 
             break
         msg = msg + "\n" + ms_g
         if len(msg) > MAX_MESSAGE_LENGTH:  # todo - will catch later
