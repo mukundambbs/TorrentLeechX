@@ -96,7 +96,7 @@ async def status_message_f(
                 msg += f"<b>🔍𝗘𝗧𝗔:</b> <code>{file.eta_string()}</code>"  
                 #umen = f'<a href="tg://user?id={file.message.from_user.id}">{file.message.from_user.first_name}</a>'
                 #msg += f"\n<b>👤𝗨𝘀𝗲𝗿:</b> {umen} (<code>{file.message.from_user.id}</code>)"
-                msg += f"\n<b>⚠️𝗪𝗮𝗿𝗻:</b> <code>/warn {file.message.from_user.id}</code>"
+                #msg += f"\n<b>⚠️𝗪𝗮𝗿𝗻:</b> <code>/warn {file.message.from_user.id}</code>"
                 msg += f"\n{msgg}"
                 msg += f"\n<b>🚫𝗧𝗼 𝗖𝗮𝗻𝗰𝗲𝗹:</b> <code>/cancel {file.gid}</code>"
                 msg += "\n"
